@@ -1,0 +1,12 @@
+.text-red{
+  color: red;
+}
+
+.label{
+  font-size: 32px;
+}
+
+.input{
+  width: 300px;  
+  height: 40px; 
+}
