@@ -2,15 +2,21 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Navbar from './components/Navbar'
+import Header from './components/Header'
+import List from './components/List'
 
 function App() {
 
+  const names = ["Antonino", "Giovanni", "Mattia"]
+
   return (
     <>
-      <h1 className='text-red'>HELLO WORLD!</h1>
+      <Navbar />
 
-      <input type="text" id="input" className='input' />
-      <label htmlFor="input" className='label'>Test label</label>
+      <Header />
+
+      <List items={names} />
     </>
   )
 }

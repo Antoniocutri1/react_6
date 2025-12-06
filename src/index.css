@@ -1,12 +1,15 @@
-.text-red{
-  color: red;
+.navBar{
+  height: 80px;
+  background-color: greenyellow;
+  position: fixed; 
+  top: 0;   
+  left: 0;     
+  width: 100%; 
 }
 
-.label{
-  font-size: 32px;
-}
-
-.input{
-  width: 300px;  
-  height: 40px; 
+.header{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
