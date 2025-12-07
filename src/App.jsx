@@ -6,8 +6,6 @@ import Main from './components/Main'
 
 function App() {
 
-  const names = ["Antonino", "Giovanni", "Mattia"]
-
   return (
     <>
       <Main>
@@ -15,15 +13,8 @@ function App() {
 
         <Main.Form />
 
-        <Main.List>
-          {names.map((name, index) =>{
-            console.log({name})
-            return <Main.List.Items key={index} name={name}></Main.List.Items>
-          })}
-        </Main.List>
-        
+        <Main.LoadingData/>
       </Main>
-      
     </>
   )
 }
