@@ -15,7 +15,13 @@ function App() {
 
         <Main.Form />
 
-        <Main.List items={names}/>
+        <Main.List>
+          {names.map((name, index) =>{
+            console.log({name})
+            return <Main.List.Items key={index} name={name}></Main.List.Items>
+          })}
+        </Main.List>
+        
       </Main>
       
     </>

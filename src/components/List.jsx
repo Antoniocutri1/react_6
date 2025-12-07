@@ -1,11 +1,10 @@
-export default function List({items}) {
+import Items from "./Items"
+export default function List({children}) {
     return(
         <ul>
-            {items.map( (item) => {
-                return(
-                    <li key={item}>{item}</li>
-                )
-            })}
+            {children}
         </ul>
     )
 }
+
+List.Items= Items;
