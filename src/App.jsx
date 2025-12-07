@@ -6,13 +6,16 @@ import Main from './components/Main'
 
 function App() {
 
+  const names = ["Antonino", "Giovanni", "Mattia"]
+
   return (
     <>
       <Main>
         <Main.Counter/>
 
         <Main.Form />
-        
+
+        <Main.List items={names}/>
       </Main>
       
     </>
