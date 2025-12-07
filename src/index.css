@@ -1,15 +1,11 @@
-.navBar{
-  height: 80px;
-  background-color: greenyellow;
-  position: fixed; 
-  top: 0;   
-  left: 0;     
-  width: 100%; 
+.increment{
+  background-color: green;
+  width: 50px;
+  height: 50px;
 }
 
-.header{
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.decrement{
+  background-color: red;
+  width: 50px;
+  height: 50px;
 }
