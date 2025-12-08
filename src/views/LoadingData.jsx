@@ -4,15 +4,15 @@ import List from "../components/List";
 
 export default function LoadingData() {
 
-    const [users, setUsers] = useState() 
+    const [posts, setPosts] = useState() 
     const [trigger, setTrigger ] = useState(false)
     const [isVisible, setIsvisible] = useState(false)
     const [isLoading, setIsLoading] = useState(false)
 
     const getData = async () =>{
-        const promise = await fetch('https://jsonplaceholder.typicode.com/users')
+        const promise = await fetch('https://jsonplaceholder.typicode.com/posts')
         const json = await promise.json();
-        setUsers(json)
+        setPosts(json)
         
     }
 
@@ -29,7 +29,7 @@ export default function LoadingData() {
         if (isVisible) {
             setTrigger(false)
             setIsvisible(false)
-            setUsers(null)
+            setPosts(null)
         } else {
             setTrigger(true)
             setIsvisible(true)
@@ -45,8 +45,8 @@ export default function LoadingData() {
             { isLoading && <p>Caricamento....</p>}
         
             <ul>
-                {users && isVisible && users.map((user)=>{
-                    return <List.Items key={user.name} name={user.name} email={user.email}></List.Items>
+                {posts && isVisible && posts.map((post)=>{
+                    return <List.Items key={post.id} name={post.title} id={post.id}></List.Items>
                 })}
             </ul>
         </>

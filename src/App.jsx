@@ -3,21 +3,26 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Main from './components/Main'
-import Navbar from './components/Navbar'
 import { BrowserRouter, Routes, Route } from "react-router";
 import Homepage from './views/Homepage'
+import Layout from './components/Layout'
+import DetailView from './views/DetailView'
 
 function App() {
 
   return (
     <>
       <BrowserRouter>
-        <Navbar/>
         <Routes>
-          <Route path={"/"} element={<Homepage />} />
-          <Route path={"/counter"} element={<Main.Counter/>} />
-          <Route path={"/form"} element={<Main.Form />} />
-          <Route path={"/posts"} element={<Main.LoadingData/>} />
+          <Route path={"/"} element={<Layout />} >
+            
+            <Route index element={<Homepage />} />
+            <Route path={"/counter"} element={<Main.Counter/>} />
+            <Route path={"/form"} element={<Main.Form />} />
+            <Route path={"/posts"} element={<Main.LoadingData/>} />
+            <Route path={"/post/:id"} element={<DetailView/>} />
+
+          </Route>
         </Routes>
       </BrowserRouter>
 
