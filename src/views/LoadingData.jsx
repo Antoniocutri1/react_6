@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import List from "./List";
+import List from "../components/List";
 
 
 export default function LoadingData() {

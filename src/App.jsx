@@ -4,19 +4,23 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Main from './components/Main'
 import Navbar from './components/Navbar'
+import { BrowserRouter, Routes, Route } from "react-router";
+import Homepage from './views/Homepage'
 
 function App() {
 
   return (
     <>
-      <Navbar/>
-      <Main>
-        <Main.Counter/>
+      <BrowserRouter>
+        <Navbar/>
+        <Routes>
+          <Route path={"/"} element={<Homepage />} />
+          <Route path={"/counter"} element={<Main.Counter/>} />
+          <Route path={"/form"} element={<Main.Form />} />
+          <Route path={"/posts"} element={<Main.LoadingData/>} />
+        </Routes>
+      </BrowserRouter>
 
-        <Main.Form />
-
-        <Main.LoadingData/>
-      </Main>
     </>
   )
 }

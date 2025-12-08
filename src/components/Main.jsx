@@ -1,6 +1,6 @@
-import Form from "./Form"
-import Counter from "./Counter";
-import LoadingData from "./LoadingData";
+import Form from "../views/Form"
+import Counter from "../views/Counter";
+import LoadingData from "../views/LoadingData";
 
 export default function Main({children}){
 
